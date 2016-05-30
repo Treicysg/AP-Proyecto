@@ -9,3 +9,16 @@ Ejecuta
 Y finalmente 
 4. rails s 
 en tu navegador ingresa localhost:3000 y podras visualizar e interactuar con la aplicacion 
+
+Caracteristicas del sistema
+
+Abierto a todo publico. Las personas pueden:
+*Denunciar 
+*Visualizar Denuncias 
+*Ver eventos
+
+Un usuario autorizado :
+*Log in al sistema
+*Administrar denuncias
+*Administrar Eventos
+*Administrar Distritos
