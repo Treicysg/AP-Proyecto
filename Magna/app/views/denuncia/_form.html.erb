@@ -1,0 +1,51 @@
+<%= form_for(@denuncium) do |f| %>
+  <% if @denuncium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@denuncium.errors.count, "error") %> prohibited this denuncium from being saved:</h2>
+
+      <ul>
+      <% @denuncium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :papellido %><br>
+    <%= f.text_field :papellido %>
+  </div>
+  <div class="field">
+    <%= f.label :sapellido %><br>
+    <%= f.text_field :sapellido %>
+  </div>
+  <div class="field">
+    <%= f.label :ced %><br>
+    <%= f.text_field :ced%>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.collection_select :distrito_id, @distrito, :id, :nombre, include_blank: true %>
+  </div>
+  <div class="field">
+     Fotografía: <%= f.file_field :cover %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

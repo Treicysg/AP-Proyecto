@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @denuncium.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @denuncium.fecha %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @denuncium.direccion %>
+</p>
+
+<div class="field">
+     Fotografía: <%= image_tag @denuncium.cover.url() %>
+</div>
+
+<%= link_to 'Edit', edit_denuncium_path(@denuncium) %> |
+<%= link_to 'Back', denuncia_path %>
